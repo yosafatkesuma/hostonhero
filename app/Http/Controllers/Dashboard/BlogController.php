@@ -63,7 +63,7 @@ class BlogController extends Controller
 
     public function edit(Blog $blog)
     {
-        dd($blog->gambar);
+        // dd($blog->gambar);
         return view('admin.blog.edit',compact('blog'));
     }
 
