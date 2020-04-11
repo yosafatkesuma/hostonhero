@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use App\Model\Menu;
 use App\Model\Blog;
 use App\Model\Contact;
@@ -13,6 +15,21 @@ class HomepageController extends Controller
         $menus = Menu::all();
         $blogs = Blog::all();
         return view('global.index', compact('menus', 'blogs'));
+    }
+
+    public function showImage($id){
+        $blog = Blog::find($id);
+        // dd($blog);
+        return view('img', compact('blog'));
+    }
+
+    public function show($id){
+        $blog = Blog::find($id);
+        // if($blog != null)
+        // {
+            return view('global.blog', compact('blog'));
+        // }
+        
     }
 
     public function store(Request $request)

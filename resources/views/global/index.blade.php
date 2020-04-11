@@ -167,11 +167,11 @@
                 @foreach ($blogs as $blog)
                     <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                         <div class="h-entry">
-                                <a href="single.html"><img src="{{ asset('/storage/'.$blog->gambar) }}" alt="Image" class="img-fluid"></a>
-                                <h2 class="font-size-regular"><a href="">{{$blog->judul}}</a></h2>
-                                {{-- <div class="meta mb-4">Ham Brook <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div> --}}
-                                <p>{{ substr($blog->isi, 0, 150) }}</p>
-                                <p><a href="#">Continue Reading...</a></p>
+                            <a href="{{ route('showImage', $blog->id) }}"><img src="{{ asset('/storage/'.$blog->gambar) }}" alt="Image" class="img-fluid"></a>
+                            <h2 class="font-size-regular"><a href="">{{$blog->judul}}</a></h2>
+                            {{-- <div class="meta mb-4">Ham Brook <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div> --}}
+                            <p>{{ substr($blog->isi, 0, 150) }}</p>
+                            <p><a href="{{ route('show', $blog->id) }}}}">Continue Reading...</a></p>
                         </div> 
                     </div>
                 @endforeach

@@ -22,6 +22,7 @@ class BlogController extends Controller
     }
 
     public function show(Blog $blog){
+        dd($blog);
         return view('img', compact('blog'));
     }
 

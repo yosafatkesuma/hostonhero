@@ -11,10 +11,12 @@
 |
 */
 
-Route::resource('/', 'HomepageController');
+Route::resource('/', 'HomepageController')->except(['edit', 'destroy', 'update', 'create', 'show']);
+
 
 Auth::routes();
-
+Route::get('/{show}', 'HomepageController@show')->name('show');
+Route::get('/img/{showImage}', 'HomepageController@showImage')->name('showImage');
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/dashboard', 'HomeController@index')->name('admin.dashboard');
     Route::resource('menu', 'Dashboard\MenuController');
