@@ -8,7 +8,7 @@
                     <div class="card-header">Dashboard</div>
 
                     <div class="card-body">
-                        <p>Selamat Datang di Halamanan Contact</p>
+                        <p>Selamat Datang di Halaman Contact</p>
                         <h1>Arsip Contact</h1>
                         <table class="table table-striped">
                             <thead >

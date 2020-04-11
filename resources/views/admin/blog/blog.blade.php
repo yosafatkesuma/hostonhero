@@ -8,7 +8,7 @@
                     <div class="card-header">Dashboard</div>
 
                     <div class="card-body">
-                        <p>Selamat Datang di Halamanan Blog</p>
+                        <p>Selamat Datang di Halaman Blog</p>
                         <h1>Arsip Blog</h1>
                         <p><a href="{{ route('blog.create') }}">Tambah Blog</a></p>
                         <table class="table table-striped">

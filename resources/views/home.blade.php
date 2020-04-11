@@ -8,7 +8,7 @@
                     <div class="card-header">Dashboard</div>
 
                     <div class="card-body">
-                        <h1>Selamat Datang di Halamanan Admin</h1>
+                        <h1>Selamat Datang di Halaman Admin</h1>
                         <p>Anda dapat memilih salah satu pilihan menu di bagian navigation bar</p>
                     </div>
                 </div>

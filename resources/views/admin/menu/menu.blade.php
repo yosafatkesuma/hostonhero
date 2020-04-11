@@ -8,7 +8,7 @@
                     <div class="card-header">Dashboard</div>
 
                     <div class="card-body">
-                        <p>Selamat Datang di Halamanan Menu</p>
+                        <p>Selamat Datang di Halaman Menu</p>
                         <h1>Arsip Menu</h1>
                         <p><a href="{{ route('menu.create') }}">Tambah Menu</a></p>
                         <table class="table table-striped">
