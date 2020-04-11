@@ -10,13 +10,8 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $contacts = Contact::all;
+        $contacts = Contact::all();
         return view('admin.contact', compact('contacts'))->with('i', (request()->input(1)));
-    }
-
-    public function create()
-    {
-        return view();
     }
 
 }

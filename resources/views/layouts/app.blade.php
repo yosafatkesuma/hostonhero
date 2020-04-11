@@ -43,7 +43,7 @@
                                 <a class="nav-link" href="{{ route('blog.index') }}">{{ __('Blog') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('admin.contact') }}">{{ __('Contact') }}</a>
+                                <a class="nav-link" href="{{ route('contact.index') }}">{{ __('Contact') }}</a>
                             </li>
                         @endauth
                     </ul>

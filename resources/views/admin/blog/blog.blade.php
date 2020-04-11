@@ -12,27 +12,25 @@
                         <h1>Arsip Blog</h1>
                         <p><a href="{{ route('blog.create') }}">Tambah Blog</a></p>
                         <table class="table table-striped">
-                            <thead >
+                            <thead>
                                 <tr>
-                                    <th class="col-md-1">No</th>
-                                    <th class="col-md-1">Judul</th>
-                                    <th class="col-md-6">Isi</th>
-                                    <th class="col-md-2">Gambar</th>
-                                    <th class="col-md-2">Aksi</th>
+                                    <th>No</th>
+                                    <th>Judul</th>
+                                    <th>Isi</th>
+                                    <th>Gambar</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($blogs as $blog)
                                 <tr>
-                                    <td class="col-md-1">
-                                        {{ ++$i }}
+                                    <td >{{ ++$i }}</td>
+                                    <td >{{ $blog->judul }}</td>
+                                    <td width="50%">{{ $blog->isi }}</td>
+                                    <td >
+                                        <a href="{{ route('blog.show', $blog->id) }}">{{ $blog->gambar }}</a>
                                     </td>
-                                    <td class="col-md-1">{{ $blog->judul }}</td>
-                                    <td class="col-md-6">{{ $blog->isi }}</td>
-                                    <td class="col-md-2">
-                                        <a href="{{ route('blog.shows', $blog->id) }}">{{ $blog->gambar }}</a>
-                                    </td>
-                                    <td class="col-md-2">
+                                    <td >
                                         <form action="{{ route('blog.destroy',$blog->id) }}" method="POST">
                                             <a class="btn btn-primary" href="{{ route('blog.edit',$blog->id) }}">Edit</a>
                                             @csrf

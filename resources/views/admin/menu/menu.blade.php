@@ -14,21 +14,19 @@
                         <table class="table table-striped">
                             <thead >
                                 <tr>
-                                    <th class="col-md-1">No</th>
-                                    <th class="col-md-1">Nama</th>
-                                    <th class="col-md-8">Isi</th>
-                                    <th class="col-md-2">Aksi</th>
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>Isi</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($menus as $menu)
                                 <tr>
-                                    <td class="col-md-1">
-                                        {{ ++$i }}
-                                    </td>
-                                    <td class="col-md-1">{{ $menu->nama }}</td>
-                                    <td class="col-md-8">{{ $menu->isi }}</td>
-                                    <td class="col-md-2">
+                                    <td>{{ ++$i }}</td>
+                                    <td>{{ $menu->nama }}</td>
+                                    <td width="75%">{{ $menu->isi }}</td>
+                                    <td>
                                         <form action="{{ route('menu.destroy',$menu->id) }}" method="POST">
                                             <a class="btn btn-primary" href="{{ route('menu.edit',$menu->id) }}">Edit</a>
                                             @csrf

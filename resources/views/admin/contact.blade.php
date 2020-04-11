@@ -13,23 +13,21 @@
                         <table class="table table-striped">
                             <thead >
                                 <tr>
-                                    <th class="col-md-1">No</th>
-                                    <th class="col-md-2">Nama</th>
-                                    <th class="col-md-2">Email</th>
-                                    <th class="col-md-2">Subjek</th>
-                                    <th class="col-md-3">Pesan</th>
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>Email</th>
+                                    <th>Subjek</th>
+                                    <th>Pesan</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($contacts as $contact)
                                 <tr>
-                                    <td class="col-md-1">
-                                        {{ ++$i }}
-                                    </td>
-                                    <td class="col-md-2">{{ $contact->nama }}</td>
-                                    <td class="col-md-2">{{ $contact->email }}</td>
-                                    <td class="col-md-2">{{ $contact->judul }}</td>
-                                    <td class="col-md-3">{{ $contact->pesan }}</td>
+                                    <td>{{ ++$i }}</td>
+                                    <td>{{ $contact->nama }}</td>
+                                    <td>{{ $contact->email }}</td>
+                                    <td>{{ $contact->judul }}</td>
+                                    <td>{{ $contact->pesan }}</td>
                                 </tr>
                                 @endforeach
                             </tbody>

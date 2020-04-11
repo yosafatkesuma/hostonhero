@@ -19,5 +19,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/dashboard', 'HomeController@index')->name('admin.dashboard');
     Route::resource('menu', 'Dashboard\MenuController');
     Route::resource('blog', 'Dashboard\BlogController');
-    Route::get('/contact', 'Dashboard\ContactController@index')->name('admin.contact');
+    Route::resource('contact', 'Dashboard\ContactController')->except(['store', 'create', 'update', 'destroy', 'edit', 'show']);
 });
