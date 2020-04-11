@@ -31,7 +31,7 @@
                                     <label class="col-md-4 text-right">Pilih Gambar</label>
                                     <div class="col-md-8">
                                         <input type="file" name="gambar" />
-                                        <img src="{{ asset('/storage/'.$blog->gambar) }}" class="img-thumbnail" width="100">
+                                        <img src="{{ asset('/images/'.$blog->gambar) }}" class="img-thumbnail" width="100">
                                         <input type="hidden" name="hidden_image" value="{{ $blog->gambar }}" />
                                     </div>
                                 </div>

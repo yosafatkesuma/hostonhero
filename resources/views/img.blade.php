@@ -1,1 +1,1 @@
-<img src="{{ asset('/storage/'.$blog->gambar) }}" alt="">
+<img src="{{ asset('/images/'.$blog->gambar) }}" alt="">

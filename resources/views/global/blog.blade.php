@@ -28,7 +28,7 @@
             </div>
             <div>
                 @if ($blog != null)
-                    <img src="{{ asset('/storage/'.$blog->gambar) }}" alt="Image" class="img-fluid">
+                    <img src="{{ asset('/images/'.$blog->gambar) }}" alt="Image" class="img-fluid">
                     <h2>{{ $blog->judul }}</h2>
                     <p>{{ $blog->isi }}</p>
                 @endif                

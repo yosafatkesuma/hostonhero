@@ -42,7 +42,7 @@ class BlogController extends Controller
             $imageName = basename($image->getClientOriginalName(), '.'.$image->getClientOriginalExtension());
             
             $extension = $image->getClientOriginalExtension();
-            Storage::disk('public')->put($imageName.'.'.$extension,  File::get($image));
+            Storage::disk('public_uploads')->put($imageName.'.'.$extension,  File::get($image));
             // dd($image.getFilename());
             $form_data = array(
                 'judul'      => $request->judul,
@@ -80,7 +80,7 @@ class BlogController extends Controller
             $imageName = basename($image->getClientOriginalName(), '.'.$image->getClientOriginalExtension());
             
             $extension = $image->getClientOriginalExtension();
-            Storage::disk('public')->put($imageName.'.'.$extension,  File::get($image));
+            Storage::disk('public_uploads')->put($imageName.'.'.$extension,  File::get($image));
             // dd($image.getFilename());
             $form_data = array(
                 'judul'      => $request->judul,
